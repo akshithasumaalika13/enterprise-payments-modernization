@@ -10,7 +10,7 @@ resource "aws_s3_bucket" "curated" { bucket = var.curated_bucket_name }
 resource "aws_iam_role" "data_engineer" {
   name = "northstar-data-engineer"
   assume_role_policy = jsonencode({
-    Version="2012-10-17",
-    Statement=[{Effect="Allow", Principal={Service="ec2.amazonaws.com"}, Action="sts:AssumeRole"}]
+    Version   = "2012-10-17",
+    Statement = [{ Effect = "Allow", Principal = { Service = "ec2.amazonaws.com" }, Action = "sts:AssumeRole" }]
   })
 }
