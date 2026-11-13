@@ -1,0 +1,12 @@
+dataset: fct_payments
+business_owner: Finance Analytics
+technical_owner: Data Engineering
+classification: Confidential
+pii: false
+refresh_sla_minutes: 30
+upstream:
+  - raw.payments
+  - stg_payments
+consumers:
+  - Finance Executive Dashboard
+  - Revenue Assurance API

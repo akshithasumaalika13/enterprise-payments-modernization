@@ -1,0 +1,15 @@
+{
+  "name": "northstar-postgres-payments",
+  "config": {
+    "connector.class": "io.debezium.connector.postgresql.PostgresConnector",
+    "database.hostname": "postgres",
+    "database.port": "5432",
+    "database.user": "fintech",
+    "database.password": "fintech",
+    "database.dbname": "fintech",
+    "topic.prefix": "northstar",
+    "table.include.list": "public.payments,public.product_events",
+    "plugin.name": "pgoutput",
+    "snapshot.mode": "initial"
+  }
+}
